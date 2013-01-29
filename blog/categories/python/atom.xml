@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Mike Tech]]></title>
-  <link href="http://mikegao.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: python | Mike Tech]]></title>
+  <link href="http://mikegao.github.com/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://mikegao.github.com/"/>
   <updated>2013-01-29T14:00:47+08:00</updated>
   <id>http://mikegao.github.com/</id>
@@ -210,16 +210,6 @@ else:
   print "World"
 &gt;&gt;&gt; Hello
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://mikegao.github.com/blog/hello-world/"/>
-    <updated>2013-01-29T10:23:00+08:00</updated>
-    <id>http://mikegao.github.com/blog/hello-world</id>
-    <content type="html"><![CDATA[<p>   终于搞好了OctPress On Git Page！
-   继续Blog之旅</p>
 ]]></content>
   </entry>
   
