@@ -4,7 +4,7 @@
   <title><![CDATA[Mike Tech]]></title>
   <link href="http://mikegao.github.com/atom.xml" rel="self"/>
   <link href="http://mikegao.github.com/"/>
-  <updated>2013-01-30T17:25:36+08:00</updated>
+  <updated>2013-01-30T17:38:51+08:00</updated>
   <id>http://mikegao.github.com/</id>
   <author>
     <name><![CDATA[Mike Gao]]></name>
@@ -239,6 +239,9 @@ else:
     <id>http://mikegao.github.com/blog/hello-world</id>
     <content type="html"><![CDATA[<p>   终于搞好了OctPress On Git Page！
    继续Blog之旅</p>
+
+<p>   附上手机图片一张，无码
+   <img src="http://mikegao.github.com/downloads/adidas.jpg"></p>
 ]]></content>
   </entry>
   
