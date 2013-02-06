@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Object-C 数据类型和表达式 - Mike Tech</title>
+  <meta name="author" content="Mike Gao">
+
+  
+  <meta name="description" content="I. Int类型 1.八进制 如果第一位是0，则表示8进制
+NSlog调用格式字符串使用格式符号%o，显示的值不带有前导0，使用%#o将显示前导0 2.十六进制 0x开头表示16进制 1
+rgbColor = 0xFFEF0D; NSlog调用格式字符串使用格式符号%x，显示的值不带有前导0x， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mikegao.github.com/blog/objc-datatype/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Mike Tech" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Mike Tech</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mikegao.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Object-C 数据类型和表达式</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-06T14:13:00+08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>I. Int类型</h2>
+
+<h3>1.八进制</h3>
+
+<p>如果第一位是0，则表示8进制
+NSlog调用格式字符串使用格式符号%o，显示的值不带有前导0，使用%#o将显示前导0</p>
+
+<h3>2.十六进制</h3>
+
+<p>0x开头表示16进制</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">rgbColor</span> <span class="o">=</span> <span class="mh">0xFFEF0D</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>NSlog调用格式字符串使用格式符号%x，显示的值不带有前导0x，使用%#X或%X将显示前导0x</p>
+
+<h2>II. Float类型</h2>
+
+<p>要使用科学计数法，NSLog格式字符串中指定格式字符%e，使用NSLog格式字符串%g允许NSLog确定使用常用的浮点计数法</p>
+
+<h3>III. Double类型</h3>
+
+<p>要显示double值，可用格式符号%f, %e或%g，它们与显示float值所用的格式符号是相同的。</p>
+
+<h3>IV. char类型</h3>
+
+<p>将字符放入一对单引号中就能得到字符常量
+字符常量是放在单引号中的单个字符，字符串则是放在双引号中的任意个字符。前面有@字符并且放在双引号中的字符串是NSString字符串对象。
+在NSLog调用中可以使用格式字符%c。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="kt">int</span> <span class="n">intergerVar</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</span><span class='line'><span class="kt">float</span> <span class="n">floatingVar</span> <span class="o">=</span> <span class="mf">331.79</span><span class="p">;</span>
+</span><span class='line'><span class="kt">double</span> <span class="n">doubleVar</span> <span class="o">=</span> <span class="mf">8.44e+11</span><span class="p">;</span>
+</span><span class='line'><span class="kt">char</span> <span class="n">charVar</span> <span class="o">=</span> <span class="sc">&#39;W&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;integerVar = %i&quot;</span><span class="p">,</span> <span class="n">integerVar</span><span class="p">);</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;floatingVar = %f&quot;</span><span class="p">,</span> <span class="n">floatingVar</span><span class="p">);</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;doubleVar = %e&quot;</span><span class="p">,</span> <span class="n">doubleVar</span><span class="p">);</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;doubleVar = %g&quot;</span><span class="p">,</span> <span class="n">doubleVar</span><span class="p">);</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;charVar = %c&quot;</span><span class="p">,</span> <span class="n">charVar</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="kt">long</span> <span class="kt">int</span> <span class="n">numberOfPoints</span> <span class="o">=</span> <span class="mi">131071100L</span><span class="p">;</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;long int = %li&quot;</span><span class="p">,</span> <span class="n">numberOfPoints</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">short</span> <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;shot int = %hi&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">counter</span><span class="p">;</span> <span class="c1">// 变量counter只用于保存正值</span>
+</span><span class='line'><span class="c1">//0x00ffU</span>
+</span><span class='line'><span class="mi">200000</span><span class="n">UL</span> <span class="c1">//将常量20000看作unsigned long</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nf">newObject:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">type</span><span class="p">;</span> <span class="c1">// 声明一个名为newObject的实例方法，它具有名为type的单个整型参数并有id类型的返回值。</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Mike Gao</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-06T14:13:00+08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/object-c/'>object-c</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mikegao.github.com/blog/objc-datatype/" data-via="" data-counturl="http://mikegao.github.com/blog/objc-datatype/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/object-c-class/" title="Previous Post: Object-C 类、对象和方法">&laquo; Object-C 类、对象和方法</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+
+
+
+
+<section>
+  <ul id="recent_posts">
+      <li class="post">
+      <a href="http://mikegao.github.com" alt="Home"><img src="/images/Home.png"></a>
+      <a href="http://mikegao.github.com/archives/" alt="Archives"><img src="/images/Calendar.png"></a>
+      <a href="mailto:mike.gao0611@gmail.com" alt="E-Mail"><img src="/images/Envelope.png"></a>
+      <a href="http://mikegao.github.com/atom.xml" alt="subscribe feed"><img src="/images/rss_big.png"></a>
+      </li>
+  </ul>
+</section>
+<section>
+  <h1>About Me</h1>
+  <p>A rubyer, Apple User</p>
+  <p>A Backend engineer, A Product learner</p>
+  <p>在互联网各个行业中挣扎着，寻找着自己的Chance</p>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/objc-datatype/">Object-C 数据类型和表达式</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/object-c-class/">Object-C 类、对象和方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/five-minutes-of-meditation/">五分钟冥想法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/beginner-of-python/">Beginner_Of_Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/hello-world/">Hello World</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Mike Gao -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

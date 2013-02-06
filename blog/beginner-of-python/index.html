@@ -9,12 +9,22 @@
   <meta name="author" content="Mike Gao">
 
   
-  <meta name="description" content="变量交换 x = 6
+  <meta name="description" content="变量交换1
+2
+3
+4
+5
+6
+7
+8
+x = 6
 y = 5 x, y = y, x
-print x &gt;&gt;&gt; 5
+print x
+&gt;&gt;&gt; 5
 print y
-&gt;&gt;&gt; 6 if 语句再行内 print "Hello" if True else "World"
-&gt;&gt;&gt; Hello 连接 &hellip;">
+&gt;&gt;&gt; 6 if 语句再行内1
+2
+print &quot;Hello&quot; if True else &quot; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,198 +103,319 @@ print y
   </header>
 
 
-<div class="entry-content"><h4>变量交换</h4>
+<div class="entry-content"><figure class='code'><figcaption><span>变量交换</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+</span><span class='line'><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span>
+</span><span class='line'><span class="k">print</span> <span class="n">y</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>x = 6
-y = 5
 
-x, y = y, x
-print x 
-&gt;&gt;&gt; 5
-print y
-&gt;&gt;&gt; 6
-</code></pre>
 
-<h4>if 语句再行内</h4>
 
-<pre><code>print "Hello" if True else "World"
-&gt;&gt;&gt; Hello
-</code></pre>
+<figure class='code'><figcaption><span>if 语句再行内</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">print</span> <span class="s">&quot;Hello&quot;</span> <span class="k">if</span> <span class="bp">True</span> <span class="k">else</span> <span class="s">&quot;World&quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">Hello</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h4>连接</h4>
 
-<p>   下面的最后一种方式在绑定两个不同类型的对象时显得很cool</p>
 
-<pre><code>nfc = ["Packers", "49ers"]
-afc = ["Ravens", "Patriots"]
-print nfc + afc
-&gt;&gt;&gt; ['Packers', '49ers', 'Ravens', 'Patriots']
 
-print str(1) + " world"
-&gt;&gt;&gt; 1 world
+<figure class='code'><figcaption><span>连接</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 下面的最后一种方式在绑定两个不同类型的对象时显得很cool</span>
+</span><span class='line'><span class="n">nfc</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Packers&quot;</span><span class="p">,</span> <span class="s">&quot;49ers&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="n">afc</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s">&quot;Patriots&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="k">print</span> <span class="n">nfc</span> <span class="o">+</span> <span class="n">afc</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; world&quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="n">world</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">pring</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;world&quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="n">world</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span> <span class="n">nfc</span><span class="p">,</span> <span class="mi">1</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">]</span> <span class="mi">1</span>
+</span></code></pre></td></tr></table></div></figure>
 
-pring 1, "world"
-&gt;&gt;&gt; 1 world
 
-print nfc, 1
-&gt;&gt;&gt; ['Packers', '49ers'] 1
-</code></pre>
 
-<h4>数字技巧</h4>
 
-<pre><code># 除后向下取整
-print 5.0//2
-&gt;&gt;&gt; 2
-# 2的5次方
-print 2**5
-&gt;&gt;&gt; 32
-</code></pre>
+<figure class='code'><figcaption><span>数字技巧</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 除后向下取整</span>
+</span><span class='line'><span class="k">print</span> <span class="mf">5.0</span><span class="o">//</span><span class="mi">2</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span>
+</span><span class='line'><span class="c"># 2的5次方</span>
+</span><span class='line'><span class="k">print</span> <span class="mi">2</span><span class="o">**</span><span class="mi">5</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">32</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h4>注意浮点数的除法</h4>
 
-<pre><code>print .3/.1
-&gt;&gt;&gt; 2.9999999999999996
-print .3//.1
-&gt;&gt;&gt; 2.0
-</code></pre>
 
-<h4>数值比较</h4>
 
-<pre><code>x = 2
-if 3 &gt; x &gt; 1:
-  print x
-&gt;&gt;&gt; 2
-if 1 &lt; x &gt; 0:
-  print x
-&gt;&gt;&gt; 2
-</code></pre>
+<figure class='code'><figcaption><span>注意浮点数的除法</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">print</span> <span class="o">.</span><span class="mi">3</span><span class="o">/.</span><span class="mi">1</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mf">2.9999999999999996</span>
+</span><span class='line'><span class="k">print</span> <span class="o">.</span><span class="mi">3</span><span class="o">//.</span><span class="mi">1</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mf">2.0</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h4>同时迭代两个列表</h4>
 
-<pre><code>nfc = ['Packers', '49ers']
-afc = ['Ravens', 'Patriots']
-for teama, teamb in zip(nfc, afc)
-  print teama + " vs. " + teamb
-&gt;&gt;&gt; Packers vs. Ravens
-&gt;&gt;&gt; 49ers vs. Patriots
-</code></pre>
 
-<h4>带索引的列表迭代</h4>
 
-<pre><code>teams = ["Packers", "49ers", "Ravens", "Patriots"]
-for index, team in enumerate(teams):
-  print index, team
-&gt;&gt;&gt; 0 Packers
-&gt;&gt;&gt; 1 49ers
-&gt;&gt;&gt; 2 Ravens
-&gt;&gt;&gt; 3 Patriots
-</code></pre>
+<figure class='code'><figcaption><span>数值比较</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'><span class="k">if</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span class='line'>  <span class="k">print</span> <span class="n">x</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span>
+</span><span class='line'><span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h4>列表推导式</h4>
 
-<p>  已知一个列表，我们可以刷选出偶数列表方法</p>
 
-<pre><code>numbers = [1,2,3,4,5]
-even = [number for number in numbers if number%2 == 0]
-</code></pre>
 
-<h4>字典推导</h4>
+<figure class='code'><figcaption><span>同时迭代两个列表</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">nfc</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="n">afc</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="k">for</span> <span class="n">teama</span><span class="p">,</span> <span class="n">teamb</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nfc</span><span class="p">,</span> <span class="n">afc</span><span class="p">)</span>
+</span><span class='line'><span class="k">print</span> <span class="n">teama</span> <span class="o">+</span> <span class="s">&quot; vs. &quot;</span> <span class="o">+</span> <span class="n">teamb</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">Packers</span> <span class="n">vs</span><span class="o">.</span> <span class="n">Ravens</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">49</span><span class="n">ers</span> <span class="n">vs</span><span class="o">.</span> <span class="n">Patriots</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>  和列表推导类似</p>
 
-<pre><code>teams = ['Packers', '49ers', 'Ravens', 'Patriots']
-print {key: value for value, key in enumerate(teams)}
-&gt;&gt;&gt; {'49ers': 1, 'Ravens': 2, 'Patriots': 3, 'Packers': 0}
-</code></pre>
 
-<h4>初始化列表的值</h4>
 
-<pre><code>items = [0]*3
-print items
-&gt;&gt;&gt; [0, 0, 0]
-</code></pre>
+<figure class='code'><figcaption><span>带索引的列表迭代</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Packers&quot;</span><span class="p">,</span> <span class="s">&quot;49ers&quot;</span><span class="p">,</span> <span class="s">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s">&quot;Patriots&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">team</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">teams</span><span class="p">):</span>
+</span><span class='line'>  <span class="k">print</span> <span class="n">index</span><span class="p">,</span> <span class="n">team</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span> <span class="n">Packers</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="mi">49</span><span class="n">ers</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="n">Ravens</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="n">Patriots</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h4>列表转换为字符串</h4>
 
-<pre><code>teams = ['Packers', '49ers', 'Ravens', 'Patriots']
-print ", ".join(teams)
-&gt;&gt;&gt; 'Packers, 49ers, Ravens, Patriots'
-</code></pre>
 
-<h4>从字典中获取元素</h4>
 
-<pre><code>data = {'user': 1, 'name': 'Max', 'three': 4}
-try:
-  is_admin = data['admin']
-except KeyError:
-  is_admin = False
-</code></pre>
+<figure class='code'><figcaption><span>列表推导式</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 已知一个列表，我们可以刷选出偶数列表方法</span>
+</span><span class='line'><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="n">even</span> <span class="o">=</span> <span class="p">[</span><span class="n">number</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">number</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>  替换成这样：</p>
 
-<pre><code>data = {'user': 1, 'name': 'Max', 'three': 4}
-is_admin = data.get('admin', False)
-</code></pre>
 
-<h4>获取列表的子集</h4>
 
-<pre><code>x= [1,2,3,4,5]
-# 前3个
-print x[:3]
-&gt;&gt;&gt; [1, 2, 3]
-# 中间4个
-print x[1:5]
-&gt;&gt;&gt; [2, 3, 4, 5]
-# 最后3个
-print x[3:]
-&gt;&gt;&gt; [4, 5, 6]
-# 奇数项
-print x[::2]
-&gt;&gt; [1, 3, 5]
-# 偶数项
-print x[1::2]
-&gt;&gt; [2, 4, 6]
-</code></pre>
+<figure class='code'><figcaption><span>字典推导</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 和列表推导类似</span>
+</span><span class='line'><span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="k">print</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">value</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">teams</span><span class="p">)}</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="s">&#39;49ers&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;Packers&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h4>60个字符解决FizzBuzz</h4>
 
-<p>  写一个程序，打印数字1到100，3的倍数打印“Fizz”来替换这个数，5的倍数打印“Buzz”，对于既是3的倍数又是5的倍数的数字打印“FizzBuzz”</p>
 
-<pre><code>for x in range(101):print'fizz'[x%3*4::]+'buzz'[x%5*4::]or x
-</code></pre>
 
-<h4>集合</h4>
+<figure class='code'><figcaption><span>初始化列表的值</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
+</span><span class='line'><span class="k">print</span> <span class="n">items</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>from collections import Counter
-print Counter("hello")
-&gt;&gt;&gt; Counter({'1': 2, 'h': 1, 'e': 1, 'o': 1})
-</code></pre>
 
-<h4>迭代工具</h4>
 
-<p>  和collections库一样，还有一个库叫itertools，对某些问题真能高效地解决。其中一个用例是查找所有组合，他能告诉你在一个组中元素的所有不能的组合方式</p>
 
-<pre><code>from itertools import combinations
-teams = ["Packers", "49ers", "Ravens", "Patriots"]
-for game in combinations(teams, 2):
-  print game
-&gt;&gt;&gt; ('Packers', '49ers')
-&gt;&gt;&gt; ('Packers', 'Ravens')
-&gt;&gt;&gt; ('Packers', 'Patriots')
-&gt;&gt;&gt; ('49ers', 'Ravens')
-&gt;&gt;&gt; ('49ers', 'Patriots')
-&gt;&gt;&gt; ('Ravens', 'Patriots')
-</code></pre>
+<figure class='code'><figcaption><span>列表转换为字符串</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="k">print</span> <span class="s">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="s">&#39;Packers, 49ers, Ravens, Patriots&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h4>False == True</h4>
 
-<pre><code>False = True
-if False:
-  print "Hello"
-else:
-  print "World"
-&gt;&gt;&gt; Hello
-</code></pre>
+
+
+<figure class='code'><figcaption><span>从字典中获取元素</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;user&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;Max&#39;</span><span class="p">,</span> <span class="s">&#39;three&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+</span><span class='line'><span class="k">try</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">is_admin</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;admin&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">is_admin</span> <span class="o">=</span> <span class="bp">False</span>
+</span><span class='line'><span class="c"># 替换成这样：</span>
+</span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;user&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;Max&#39;</span><span class="p">,</span> <span class="s">&#39;three&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+</span><span class='line'><span class="n">is_admin</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;admin&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>获取列表的子集</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 前3个</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 中间4个</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 最后3个</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 奇数项</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 偶数项</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>60个字符解决FizzBuzz</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 写一个程序，打印数字1到100，3的倍数打印“Fizz”来替换这个数，5的倍数打印“Buzz”，对于既是3的倍数又是5的倍数的数字打印“FizzBuzz”</span>
+</span><span class='line'><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">101</span><span class="p">):</span><span class="k">print</span><span class="s">&#39;fizz&#39;</span><span class="p">[</span><span class="n">x</span><span class="o">%</span><span class="mi">3</span><span class="o">*</span><span class="mi">4</span><span class="p">::]</span><span class="o">+</span><span class="s">&#39;buzz&#39;</span><span class="p">[</span><span class="n">x</span><span class="o">%</span><span class="mi">5</span><span class="o">*</span><span class="mi">4</span><span class="p">::]</span><span class="ow">or</span> <span class="n">x</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>集合</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+</span><span class='line'><span class="k">print</span> <span class="n">Counter</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">Counter</span><span class="p">({</span><span class="s">&#39;1&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;h&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;e&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;o&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>迭代工具</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 和collections库一样，还有一个库叫itertools，对某些问题真能高效地解决。其中一个用例是查找所有组合，他能告诉你在一个组中元素的所有不能的组合方式</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
+</span><span class='line'><span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Packers&quot;</span><span class="p">,</span> <span class="s">&quot;49ers&quot;</span><span class="p">,</span> <span class="s">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s">&quot;Patriots&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="k">for</span> <span class="n">game</span> <span class="ow">in</span> <span class="n">combinations</span><span class="p">(</span><span class="n">teams</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+</span><span class='line'><span class="k">print</span> <span class="n">game</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>False == True</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="bp">False</span> <span class="o">=</span> <span class="bp">True</span>
+</span><span class='line'><span class="k">if</span> <span class="bp">False</span><span class="p">:</span>
+</span><span class='line'>  <span class="k">print</span> <span class="s">&quot;Hello&quot;</span>
+</span><span class='line'><span class="k">else</span><span class="p">:</span>
+</span><span class='line'>  <span class="k">print</span> <span class="s">&quot;World&quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">Hello</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -366,6 +497,14 @@ else:
 </section><section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/objc-datatype/">Object-C 数据类型和表达式</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/object-c-class/">Object-C 类、对象和方法</a>
+      </li>
     
       <li class="post">
         <a href="/blog/five-minutes-of-meditation/">五分钟冥想法</a>

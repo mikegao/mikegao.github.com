@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Object-C 类、对象和方法 - Mike Tech</title>
+  <meta name="author" content="Mike Gao">
+
+  
+  <meta name="description" content="采用特定的语法对类和实例应用方法1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+[ClassOrInstance method];
+// 在这条语句中，左方括号后要紧跟类的名称或者该类的实例的名称，它后面可以是一个或多个空格，空格后面是将要执行的方法。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mikegao.github.com/blog/object-c-class/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Mike Tech" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Mike Tech</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mikegao.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Object-C 类、对象和方法</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-06T11:33:00+08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><figure class='code'><figcaption><span>采用特定的语法对类和实例应用方法</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">ClassOrInstance</span> <span class="n">method</span><span class="p">];</span>
+</span><span class='line'><span class="c1">// 在这条语句中，左方括号后要紧跟类的名称或者该类的实例的名称，它后面可以是一个或多个空格，空格后面是将要执行的方法。最后使用右方括号和结束分号来中止。</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">yourCar</span> <span class="o">=</span> <span class="p">[</span><span class="n">Car</span> <span class="n">new</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">prep</span><span class="p">];</span>     <span class="c1">// 准备好第一次使用</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">drive</span><span class="p">];</span>    <span class="c1">// 驾驶汽车</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">wash</span><span class="p">];</span>     <span class="c1">// 洗车</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">getGase</span><span class="p">];</span>  <span class="c1">// 如果需要就给汽车加油</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">service</span><span class="p">];</span>  <span class="c1">// 维修</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">topDown</span><span class="p">];</span>  <span class="c1">// 是否为一辆敞蓬车</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">topUp</span><span class="p">];</span>
+</span><span class='line'><span class="n">currentMileage</span> <span class="o">=</span> <span class="p">[</span><span class="n">yourCar</span> <span class="n">cruuentOdometer</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Interface</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">@interface</span> <span class="nc">NewClassName</span>: <span class="nc">ParentClassName</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">memberDeclarations</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="n">methodDeclarations</span><span class="p">;</span>
+</span><span class='line'><span class="k">@end</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//---- @interface section ----</span>
+</span><span class='line'><span class="c1">// 用于描述类、类的数据成分以及类的方法</span>
+</span><span class='line'><span class="k">@interface</span> <span class="nc">Fraction</span>: <span class="nc">NSObject</span><span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">numerator</span><span class="p">;</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">denominator</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">print</span><span class="p">;</span> <span class="c1">// 开头的负号（-）通知编译器，这是一个实例方法 （+）表示为类方法</span>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">setNumberator:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">n</span><span class="p">;</span>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">setDenominator:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">d</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Implementation</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="c1">//---- @implementaion section ----</span>
+</span><span class='line'><span class="c1">// 实现interface方法的实际代码</span>
+</span><span class='line'><span class="k">@implementation</span> <span class="nc">Fraction</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">print</span><span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%i/%i&quot;</span><span class="p">,</span> <span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">setNumberator:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nv">n</span><span class="p">{</span>
+</span><span class='line'>    <span class="n">numerator</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">setDenominator:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nv">d</span><span class="p">{</span>
+</span><span class='line'>    <span class="n">denominator</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>main </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">Fraction</span> <span class="o">*</span><span class="n">myFraction</span><span class="p">;</span>  <span class="c1">// myFraction用于存储来自新的Fraction类变量 （*）是必须的，表示myFraction是对Fraction的一个引用（或者指针）</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Create an instance of a Fraction</span>
+</span><span class='line'><span class="n">myFraction</span> <span class="o">=</span> <span class="p">[</span><span class="n">Fraction</span> <span class="n">alloc</span><span class="p">];</span>  <span class="c1">// alloc是allocate的缩写，分配内存空间</span>
+</span><span class='line'><span class="n">myFraction</span> <span class="o">=</span> <span class="p">[</span><span class="n">myFraction</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'><span class="c1">// 亦可写成</span>
+</span><span class='line'><span class="c1">// myFraction = [[Fraction alloc] init];</span>
+</span><span class='line'><span class="c1">// 最终简写形式</span>
+</span><span class='line'><span class="c1">// Fraction *myFraction = [[Fraction alloc] init];</span>
+</span><span class='line'><span class="c1">// 以上都扯淡</span>
+</span><span class='line'><span class="n">Fraction</span> <span class="o">*</span><span class="n">myFraction</span> <span class="o">=</span> <span class="p">[</span><span class="n">Fraction</span> <span class="n">new</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Set fraction to 1/3</span>
+</span><span class='line'><span class="p">[</span><span class="n">myFraction</span> <span class="nl">setNumberator:</span> <span class="mi">1</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">myFraction</span> <span class="nl">setDenominator:</span> <span class="mi">3</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Display the fraction using the print method</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;The value of myFraction is:&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">[</span><span class="n">myFraction</span> <span class="n">print</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Mike Gao</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-06T11:33:00+08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/object-c/'>object-c</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mikegao.github.com/blog/object-c-class/" data-via="" data-counturl="http://mikegao.github.com/blog/object-c-class/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/five-minutes-of-meditation/" title="Previous Post: 五分钟冥想法">&laquo; 五分钟冥想法</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/objc-datatype/" title="Next Post: Object-C 数据类型和表达式">Object-C 数据类型和表达式 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+
+
+
+
+<section>
+  <ul id="recent_posts">
+      <li class="post">
+      <a href="http://mikegao.github.com" alt="Home"><img src="/images/Home.png"></a>
+      <a href="http://mikegao.github.com/archives/" alt="Archives"><img src="/images/Calendar.png"></a>
+      <a href="mailto:mike.gao0611@gmail.com" alt="E-Mail"><img src="/images/Envelope.png"></a>
+      <a href="http://mikegao.github.com/atom.xml" alt="subscribe feed"><img src="/images/rss_big.png"></a>
+      </li>
+  </ul>
+</section>
+<section>
+  <h1>About Me</h1>
+  <p>A rubyer, Apple User</p>
+  <p>A Backend engineer, A Product learner</p>
+  <p>在互联网各个行业中挣扎着，寻找着自己的Chance</p>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/objc-datatype/">Object-C 数据类型和表达式</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/object-c-class/">Object-C 类、对象和方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/five-minutes-of-meditation/">五分钟冥想法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/beginner-of-python/">Beginner_Of_Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/hello-world/">Hello World</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Mike Gao -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
