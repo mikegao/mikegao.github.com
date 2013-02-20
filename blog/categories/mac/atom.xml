@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mac | Mike Tech]]></title>
+  <link href="http://mikegao.github.com/blog/categories/mac/atom.xml" rel="self"/>
+  <link href="http://mikegao.github.com/"/>
+  <updated>2013-02-20T17:30:28+08:00</updated>
+  <id>http://mikegao.github.com/</id>
+  <author>
+    <name><![CDATA[Mike Gao]]></name>
+    <email><![CDATA[mike.gao0611@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mac OS 通过终端Terminal开启各种隐藏功能]]></title>
+    <link href="http://mikegao.github.com/blog/mac-terminal-command/"/>
+    <updated>2013-02-10T22:50:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/mac-terminal-command</id>
+    <content type="html"><![CDATA[<h4>显示隐藏文件</h4>
+
+<p>```
+defaults write com.apple.finder AppliShowAllFiles TRUE</p>
+
+<p>killall Finder
+```</p>
+
+<h4>显示文件路径</h4>
+
+<p><code>
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+</code></p>
+
+<h4>完全禁止Dashboard功能</h4>
+
+<p><code>
+defaults write com.apple.dashboard mcx-disabled -boolean YES
+killall Dock
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

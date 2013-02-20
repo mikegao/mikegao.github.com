@@ -9,9 +9,11 @@
   <meta name="author" content="Mike Gao">
 
   
-  <meta name="description" content="I. Int类型 1.八进制 如果第一位是0，则表示8进制
-NSlog调用格式字符串使用格式符号%o，显示的值不带有前导0，使用%#o将显示前导0 2.十六进制 0x开头表示16进制 1
-rgbColor = 0xFFEF0D; NSlog调用格式字符串使用格式符号%x，显示的值不带有前导0x， &hellip;">
+  <meta name="description" content="显示隐藏文件 1
+2
+3
+defaults write com.apple.finder AppliShowAllFiles TRUE killall Finder 显示文件路径 1
+defaults write com.apple.finder _FXShowPosixPathInTitle - &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +66,64 @@ rgbColor = 0xFFEF0D; NSlog调用格式字符串使用格式符号%x，显示的�
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/mac-terminal-command/">Mac OS 通过终端Terminal开启各种隐藏功能</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-10T22:50:00+08:00" pubdate data-updated="true">Feb 10<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4>显示隐藏文件</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder AppliShowAllFiles TRUE
+</span><span class='line'>
+</span><span class='line'>killall Finder</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>显示文件路径</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>完全禁止Dashboard功能</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.dashboard mcx-disabled -boolean YES
+</span><span class='line'>killall Dock</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -845,6 +905,10 @@ NSlog调用格式字符串使用格式符号%o，显示的值不带有前导0，
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/mac-terminal-command/">Mac OS 通过终端Terminal开启各种隐藏功能</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/objc-datatype/">Object-C 数据类型和表达式</a>
       </li>
     
@@ -858,10 +922,6 @@ NSlog调用格式字符串使用格式符号%o，显示的值不带有前导0，
     
       <li class="post">
         <a href="/blog/beginner-of-python/">Beginner_Of_Python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/hello-world/">Hello World</a>
       </li>
     
   </ul>

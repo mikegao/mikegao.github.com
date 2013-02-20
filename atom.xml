@@ -4,7 +4,7 @@
   <title><![CDATA[Mike Tech]]></title>
   <link href="http://mikegao.github.com/atom.xml" rel="self"/>
   <link href="http://mikegao.github.com/"/>
-  <updated>2013-02-06T17:31:49+08:00</updated>
+  <updated>2013-02-20T17:30:28+08:00</updated>
   <id>http://mikegao.github.com/</id>
   <author>
     <name><![CDATA[Mike Gao]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mac OS 通过终端Terminal开启各种隐藏功能]]></title>
+    <link href="http://mikegao.github.com/blog/mac-terminal-command/"/>
+    <updated>2013-02-10T22:50:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/mac-terminal-command</id>
+    <content type="html"><![CDATA[<h4>显示隐藏文件</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder AppliShowAllFiles TRUE
+</span><span class='line'>
+</span><span class='line'>killall Finder</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>显示文件路径</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>完全禁止Dashboard功能</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.dashboard mcx-disabled -boolean YES
+</span><span class='line'>killall Dock</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Object-C 数据类型和表达式]]></title>
