@@ -4,7 +4,7 @@
   <title><![CDATA[Mike Tech]]></title>
   <link href="http://mikegao.github.com/atom.xml" rel="self"/>
   <link href="http://mikegao.github.com/"/>
-  <updated>2014-07-21T10:47:42+08:00</updated>
+  <updated>2014-07-21T17:23:37+08:00</updated>
   <id>http://mikegao.github.com/</id>
   <author>
     <name><![CDATA[Mike Gao]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[数据分析-新手篇(常用指标和术语)]]></title>
+    <link href="http://mikegao.github.com/blog/shu-ju-fen-xi-xin-shou-pian-chang-yong-zhi-biao-he-zhu-yu/"/>
+    <updated>2014-07-21T17:19:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/shu-ju-fen-xi-xin-shou-pian-chang-yong-zhi-biao-he-zhu-yu</id>
+    <content type="html"><![CDATA[<h2>1.平均数</h2>
+
+<p>一般指算数平均数</p>
+
+<h2>2.绝对数与相对数</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>相对数＝ 比较数值(比数)/基础数值(基数)</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>3.</h2>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mac OS 通过终端Terminal开启各种隐藏功能]]></title>
