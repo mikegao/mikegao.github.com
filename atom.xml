@@ -4,7 +4,7 @@
   <title><![CDATA[Mike Tech]]></title>
   <link href="http://mikegao.github.com/atom.xml" rel="self"/>
   <link href="http://mikegao.github.com/"/>
-  <updated>2014-07-21T17:23:37+08:00</updated>
+  <updated>2014-08-19T15:28:43+08:00</updated>
   <id>http://mikegao.github.com/</id>
   <author>
     <name><![CDATA[Mike Gao]]></name>
@@ -27,8 +27,6 @@
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>相对数＝ 比较数值(比数)/基础数值(基数)</span></code></pre></td></tr></table></div></figure>
 
-
-<h2>3.</h2>
 ]]></content>
   </entry>
   
@@ -59,6 +57,12 @@
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.dashboard mcx-disabled -boolean YES
 </span><span class='line'>killall Dock</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>开启 Quick Look 里的选中、复制功能</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder QLEnableTextSelection -bool TRUE;killall Finder</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
