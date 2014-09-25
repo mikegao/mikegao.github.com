@@ -5,11 +5,15 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title> - Mike Tech</title>
+  <title>Mac OS 通过终端Terminal开启各种隐藏功能 - Mike Tech</title>
   <meta name="author" content="Mike Gao">
 
   
-  <meta name="description" content="Jan 28th, 2013 About Me This is Mike Gao, I am a rubyer &amp; Apple User About Blog This blog is for all my tech notes Contact me Email: mike.gao# &hellip;">
+  <meta name="description" content="显示隐藏文件 1
+2
+3
+defaults write com.apple.finder AppliShowAllFiles TRUE killall Finder 显示文件路径 1
+defaults write com.apple.finder _FXShowPosixPathInTitle - &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mikegao.github.com/about/">
+  <link rel="canonical" href="http://mikegao.github.com/blog/mac-terminal-command+%28Mike%E7%9A%84MacBook+Pro+%E7%9A%84%E5%86%B2%E7%AA%81%E5%89%AF%E6%9C%AC+2014-08-19%29/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -61,47 +65,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title"></h1>
-    <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-28T16:49:00+08:00" pubdate data-updated="true">Jan 28<span>th</span>, 2013</time></p>
-  </header>
-  
-  <h2>About Me</h2>
-
-<p>   This is Mike Gao, I am a rubyer &amp; Apple User</p>
-
-<h2>About Blog</h2>
-
-<p>   This blog is for all my tech notes</p>
-
-<h2>Contact me</h2>
-
-<ul>
-<li> Email: mike.gao#gmail.com</li>
-<li> Weibo: <a href="http://weibo.com/mikegao0611">@mikegao0611</a></li>
-<li> Twitter: <a href="http://www.twitter.com/icegao">@icegao</a></li>
-</ul>
-
-
-  
-    <footer>
+    
+      <h1 class="entry-title">Mac OS 通过终端Terminal开启各种隐藏功能</h1>
+    
+    
       <p class="meta">
         
-        
 
 
 
@@ -113,21 +85,94 @@
   
 
 
-<time datetime="2013-01-28T16:49:00+08:00" pubdate data-updated="true">Jan 28<span>th</span>, 2013</time>
+<time datetime="2013-02-10T22:50:00+08:00" pubdate data-updated="true">Feb 10<span>th</span>, 2013</time>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><h4>显示隐藏文件</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder AppliShowAllFiles TRUE
+</span><span class='line'>
+</span><span class='line'>killall Finder</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>显示文件路径</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>完全禁止Dashboard功能</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.dashboard mcx-disabled -boolean YES
+</span><span class='line'>killall Dock</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>开启 Quick Look 里的选中、复制功能</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder QLEnableTextSelection -bool TRUE;killall Finder</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-        <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mikegao.github.com/about/index.html" data-via="" data-counturl="http://mikegao.github.com/about/index.html" >Tweet</a>
+
+<span class="byline author vcard">Posted by <span class="fn">Mike Gao</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-10T22:50:00+08:00" pubdate data-updated="true">Feb 10<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mac/'>mac</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mikegao.github.com/blog/mac-terminal-command+%28Mike%E7%9A%84MacBook+Pro+%E7%9A%84%E5%86%B2%E7%AA%81%E5%89%AF%E6%9C%AC+2014-08-19%29/" data-via="" data-counturl="http://mikegao.github.com/blog/mac-terminal-command+%28Mike%E7%9A%84MacBook+Pro+%E7%9A%84%E5%86%B2%E7%AA%81%E5%89%AF%E6%9C%AC+2014-08-19%29/" >Tweet</a>
   
   
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/blog/mac-terminal-command/" title="Previous Post: Mac OS 通过终端Terminal开启各种隐藏功能">&laquo; Mac OS 通过终端Terminal开启各种隐藏功能</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/shu-ju-fen-xi-xin-shou-pian-chang-yong-zhi-biao-he-zhu-yu/" title="Next Post: 数据分析-新手篇(常用指标和术语)">数据分析-新手篇(常用指标和术语) &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
 </div>
