@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mac | Mike Tech]]></title>
   <link href="http://mikegao.github.com/blog/categories/mac/atom.xml" rel="self"/>
   <link href="http://mikegao.github.com/"/>
-  <updated>2014-09-25T11:48:26+08:00</updated>
+  <updated>2014-09-25T11:57:41+08:00</updated>
   <id>http://mikegao.github.com/</id>
   <author>
     <name><![CDATA[Mike Gao]]></name>
@@ -12,40 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Mac OS 通过终端Terminal开启各种隐藏功能]]></title>
-    <link href="http://mikegao.github.com/blog/mac-terminal-command+%28Mike%E7%9A%84MacBook+Pro+%E7%9A%84%E5%86%B2%E7%AA%81%E5%89%AF%E6%9C%AC+2014-08-19%29/"/>
-    <updated>2013-02-10T22:50:00+08:00</updated>
-    <id>http://mikegao.github.com/blog/mac-terminal-command (Mike的MacBook Pro 的冲突副本 2014-08-19)</id>
-    <content type="html"><![CDATA[<h4>显示隐藏文件</h4>
-
-<p>```
-defaults write com.apple.finder AppliShowAllFiles TRUE</p>
-
-<p>killall Finder
-```</p>
-
-<h4>显示文件路径</h4>
-
-<p><code>
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
-</code></p>
-
-<h4>完全禁止Dashboard功能</h4>
-
-<p><code>
-defaults write com.apple.dashboard mcx-disabled -boolean YES
-killall Dock
-</code></p>
-
-<h4>开启 Quick Look 里的选中、复制功能</h4>
-
-<p><code>
-defaults write com.apple.finder QLEnableTextSelection -bool TRUE;killall Finder
-</code></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mac OS 通过终端Terminal开启各种隐藏功能]]></title>
