@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Mike Tech]]></title>
+  <link href="http://mikegao.github.com/atom.xml" rel="self"/>
+  <link href="http://mikegao.github.com/"/>
+  <updated>2014-08-19T15:28:43+08:00</updated>
+  <id>http://mikegao.github.com/</id>
+  <author>
+    <name><![CDATA[Mike Gao]]></name>
+    <email><![CDATA[mike.gao0611@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[数据分析-新手篇(常用指标和术语)]]></title>
+    <link href="http://mikegao.github.com/blog/shu-ju-fen-xi-xin-shou-pian-chang-yong-zhi-biao-he-zhu-yu/"/>
+    <updated>2014-07-21T17:19:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/shu-ju-fen-xi-xin-shou-pian-chang-yong-zhi-biao-he-zhu-yu</id>
+    <content type="html"><![CDATA[<h2>1.平均数</h2>
+
+<p>一般指算数平均数</p>
+
+<h2>2.绝对数与相对数</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>相对数＝ 比较数值(比数)/基础数值(基数)</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mac OS 通过终端Terminal开启各种隐藏功能]]></title>
+    <link href="http://mikegao.github.com/blog/mac-terminal-command/"/>
+    <updated>2013-02-10T22:50:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/mac-terminal-command</id>
+    <content type="html"><![CDATA[<h4>显示隐藏文件</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder AppliShowAllFiles TRUE
+</span><span class='line'>
+</span><span class='line'>killall Finder</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>显示文件路径</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>完全禁止Dashboard功能</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.dashboard mcx-disabled -boolean YES
+</span><span class='line'>killall Dock</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>开启 Quick Look 里的选中、复制功能</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.finder QLEnableTextSelection -bool TRUE;killall Finder</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Object-C 数据类型和表达式]]></title>
+    <link href="http://mikegao.github.com/blog/objc-datatype/"/>
+    <updated>2013-02-06T14:13:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/objc-datatype</id>
+    <content type="html"><![CDATA[<h2>I. Int类型</h2>
+
+<h3>1.八进制</h3>
+
+<p>如果第一位是0，则表示8进制
+NSlog调用格式字符串使用格式符号%o，显示的值不带有前导0，使用%#o将显示前导0</p>
+
+<h3>2.十六进制</h3>
+
+<p>0x开头表示16进制</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">rgbColor</span> <span class="o">=</span> <span class="mh">0xFFEF0D</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>NSlog调用格式字符串使用格式符号%x，显示的值不带有前导0x，使用%#X或%X将显示前导0x</p>
+
+<h2>II. Float类型</h2>
+
+<p>要使用科学计数法，NSLog格式字符串中指定格式字符%e，使用NSLog格式字符串%g允许NSLog确定使用常用的浮点计数法</p>
+
+<h3>III. Double类型</h3>
+
+<p>要显示double值，可用格式符号%f, %e或%g，它们与显示float值所用的格式符号是相同的。</p>
+
+<h3>IV. char类型</h3>
+
+<p>将字符放入一对单引号中就能得到字符常量
+字符常量是放在单引号中的单个字符，字符串则是放在双引号中的任意个字符。前面有@字符并且放在双引号中的字符串是NSString字符串对象。
+在NSLog调用中可以使用格式字符%c。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="kt">int</span> <span class="n">intergerVar</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</span><span class='line'><span class="kt">float</span> <span class="n">floatingVar</span> <span class="o">=</span> <span class="mf">331.79</span><span class="p">;</span>
+</span><span class='line'><span class="kt">double</span> <span class="n">doubleVar</span> <span class="o">=</span> <span class="mf">8.44e+11</span><span class="p">;</span>
+</span><span class='line'><span class="kt">char</span> <span class="n">charVar</span> <span class="o">=</span> <span class="sc">&#39;W&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;integerVar = %i&quot;</span><span class="p">,</span> <span class="n">integerVar</span><span class="p">);</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;floatingVar = %f&quot;</span><span class="p">,</span> <span class="n">floatingVar</span><span class="p">);</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;doubleVar = %e&quot;</span><span class="p">,</span> <span class="n">doubleVar</span><span class="p">);</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;doubleVar = %g&quot;</span><span class="p">,</span> <span class="n">doubleVar</span><span class="p">);</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;charVar = %c&quot;</span><span class="p">,</span> <span class="n">charVar</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="kt">long</span> <span class="kt">int</span> <span class="n">numberOfPoints</span> <span class="o">=</span> <span class="mi">131071100L</span><span class="p">;</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;long int = %li&quot;</span><span class="p">,</span> <span class="n">numberOfPoints</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">short</span> <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;shot int = %hi&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">counter</span><span class="p">;</span> <span class="c1">// 变量counter只用于保存正值</span>
+</span><span class='line'><span class="c1">//0x00ffU</span>
+</span><span class='line'><span class="mi">200000</span><span class="n">UL</span> <span class="c1">//将常量20000看作unsigned long</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="nf">newObject:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">type</span><span class="p">;</span> <span class="c1">// 声明一个名为newObject的实例方法，它具有名为type的单个整型参数并有id类型的返回值。</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Object-C 类、对象和方法]]></title>
+    <link href="http://mikegao.github.com/blog/object-c-class/"/>
+    <updated>2013-02-06T11:33:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/object-c-class</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span>采用特定的语法对类和实例应用方法</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">ClassOrInstance</span> <span class="n">method</span><span class="p">];</span>
+</span><span class='line'><span class="c1">// 在这条语句中，左方括号后要紧跟类的名称或者该类的实例的名称，它后面可以是一个或多个空格，空格后面是将要执行的方法。最后使用右方括号和结束分号来中止。</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">yourCar</span> <span class="o">=</span> <span class="p">[</span><span class="n">Car</span> <span class="n">new</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">prep</span><span class="p">];</span>     <span class="c1">// 准备好第一次使用</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">drive</span><span class="p">];</span>    <span class="c1">// 驾驶汽车</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">wash</span><span class="p">];</span>     <span class="c1">// 洗车</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">getGase</span><span class="p">];</span>  <span class="c1">// 如果需要就给汽车加油</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">service</span><span class="p">];</span>  <span class="c1">// 维修</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">topDown</span><span class="p">];</span>  <span class="c1">// 是否为一辆敞蓬车</span>
+</span><span class='line'><span class="p">[</span><span class="n">yourCar</span> <span class="n">topUp</span><span class="p">];</span>
+</span><span class='line'><span class="n">currentMileage</span> <span class="o">=</span> <span class="p">[</span><span class="n">yourCar</span> <span class="n">cruuentOdometer</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Interface</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">@interface</span> <span class="nc">NewClassName</span>: <span class="nc">ParentClassName</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">memberDeclarations</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="n">methodDeclarations</span><span class="p">;</span>
+</span><span class='line'><span class="k">@end</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//---- @interface section ----</span>
+</span><span class='line'><span class="c1">// 用于描述类、类的数据成分以及类的方法</span>
+</span><span class='line'><span class="k">@interface</span> <span class="nc">Fraction</span>: <span class="nc">NSObject</span><span class="p">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">numerator</span><span class="p">;</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">denominator</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">print</span><span class="p">;</span> <span class="c1">// 开头的负号（-）通知编译器，这是一个实例方法 （+）表示为类方法</span>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">setNumberator:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">n</span><span class="p">;</span>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">setDenominator:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">d</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Implementation</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="c1">//---- @implementaion section ----</span>
+</span><span class='line'><span class="c1">// 实现interface方法的实际代码</span>
+</span><span class='line'><span class="k">@implementation</span> <span class="nc">Fraction</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">print</span><span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%i/%i&quot;</span><span class="p">,</span> <span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">setNumberator:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nv">n</span><span class="p">{</span>
+</span><span class='line'>    <span class="n">numerator</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">setDenominator:</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nv">d</span><span class="p">{</span>
+</span><span class='line'>    <span class="n">denominator</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>main </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">Fraction</span> <span class="o">*</span><span class="n">myFraction</span><span class="p">;</span>  <span class="c1">// myFraction用于存储来自新的Fraction类变量 （*）是必须的，表示myFraction是对Fraction的一个引用（或者指针）</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Create an instance of a Fraction</span>
+</span><span class='line'><span class="n">myFraction</span> <span class="o">=</span> <span class="p">[</span><span class="n">Fraction</span> <span class="n">alloc</span><span class="p">];</span>  <span class="c1">// alloc是allocate的缩写，分配内存空间</span>
+</span><span class='line'><span class="n">myFraction</span> <span class="o">=</span> <span class="p">[</span><span class="n">myFraction</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'><span class="c1">// 亦可写成</span>
+</span><span class='line'><span class="c1">// myFraction = [[Fraction alloc] init];</span>
+</span><span class='line'><span class="c1">// 最终简写形式</span>
+</span><span class='line'><span class="c1">// Fraction *myFraction = [[Fraction alloc] init];</span>
+</span><span class='line'><span class="c1">// 以上都扯淡</span>
+</span><span class='line'><span class="n">Fraction</span> <span class="o">*</span><span class="n">myFraction</span> <span class="o">=</span> <span class="p">[</span><span class="n">Fraction</span> <span class="n">new</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Set fraction to 1/3</span>
+</span><span class='line'><span class="p">[</span><span class="n">myFraction</span> <span class="nl">setNumberator:</span> <span class="mi">1</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">myFraction</span> <span class="nl">setDenominator:</span> <span class="mi">3</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Display the fraction using the print method</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;The value of myFraction is:&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">[</span><span class="n">myFraction</span> <span class="n">print</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[五分钟冥想法]]></title>
+    <link href="http://mikegao.github.com/blog/five-minutes-of-meditation/"/>
+    <updated>2013-01-29T17:20:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/five-minutes-of-meditation</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>原地不动，安静做好
+坐在椅子上，双脚平放在地上，或盘腿坐在垫子上，背挺直，双手放在膝盖上，冥想时一定不要烦躁，这是自控力的基本保证，如果你想挠痒的话，可以调整一下胳膊的位置，腿交叉或伸直，看自己是否有冲动但能克制，简单的静坐对于意志力的冥想训练至关重要，你将学会，不再屈服于大脑和身体产生的冲动。</p></li>
+<li><p>注意你的呼吸
+闭上眼睛，要是怕睡着，你可以盯着某处看，比如盯着一面白墙，但不要看家庭购物频道，注意你的呼吸，吸气时在脑海中默念“吸”，呼气时再脑海中默念“呼”，当你发现自己有点走神的时候，重新将注意力集中到呼吸上，这种反复的注意力训练，能让前额皮质开启高速模式，让大脑中处理压力和冲动的区域更加稳定。</p></li>
+<li><p>感受呼吸，弄清自己是怎么走神的
+几分钟后，你就可以不再默念“呼”，“吸”了。试着专注于呼吸本身，你会注意到空气从鼻子和嘴巴进入和呼出的感觉，感觉到吸气时胸腹部的扩张和呼气时胸腹部的收缩。不再默念“呼”，“吸”后，你可能更容易走神，像之前一样，当你发现自己在想别的事情时，重新将注意力集中到呼吸上，如果你觉得很难重新集中注意力，就在心里默念几遍“呼”和“吸”，这部分的训练能锻炼你的自我意识和自控能力。</p></li>
+</ol>
+
+
+<p><em>刚开始的时候，你每天锻炼5分钟就行，习惯成自然之后，请试着每天做10-15分钟，如果你觉得有负担，那就减到5分钟。每天做比较短的训练，也比把比较长的训练拖到明天好。这样，你每天都会有一段固定的时间冥想，比如早晨洗澡之前，如果你做不到，可以对时间进行适当的调整。</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Beginner_Of_Python]]></title>
+    <link href="http://mikegao.github.com/blog/beginner-of-python/"/>
+    <updated>2013-01-29T10:42:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/beginner-of-python</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span>变量交换</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+</span><span class='line'><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span>
+</span><span class='line'><span class="k">print</span> <span class="n">y</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>if 语句再行内</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">print</span> <span class="s">&quot;Hello&quot;</span> <span class="k">if</span> <span class="bp">True</span> <span class="k">else</span> <span class="s">&quot;World&quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">Hello</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>连接</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 下面的最后一种方式在绑定两个不同类型的对象时显得很cool</span>
+</span><span class='line'><span class="n">nfc</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Packers&quot;</span><span class="p">,</span> <span class="s">&quot;49ers&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="n">afc</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s">&quot;Patriots&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="k">print</span> <span class="n">nfc</span> <span class="o">+</span> <span class="n">afc</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; world&quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="n">world</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">pring</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;world&quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="n">world</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span> <span class="n">nfc</span><span class="p">,</span> <span class="mi">1</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">]</span> <span class="mi">1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>数字技巧</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 除后向下取整</span>
+</span><span class='line'><span class="k">print</span> <span class="mf">5.0</span><span class="o">//</span><span class="mi">2</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span>
+</span><span class='line'><span class="c"># 2的5次方</span>
+</span><span class='line'><span class="k">print</span> <span class="mi">2</span><span class="o">**</span><span class="mi">5</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">32</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>注意浮点数的除法</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">print</span> <span class="o">.</span><span class="mi">3</span><span class="o">/.</span><span class="mi">1</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mf">2.9999999999999996</span>
+</span><span class='line'><span class="k">print</span> <span class="o">.</span><span class="mi">3</span><span class="o">//.</span><span class="mi">1</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mf">2.0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>数值比较</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'><span class="k">if</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span class='line'>  <span class="k">print</span> <span class="n">x</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span>
+</span><span class='line'><span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>同时迭代两个列表</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">nfc</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="n">afc</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="k">for</span> <span class="n">teama</span><span class="p">,</span> <span class="n">teamb</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nfc</span><span class="p">,</span> <span class="n">afc</span><span class="p">)</span>
+</span><span class='line'><span class="k">print</span> <span class="n">teama</span> <span class="o">+</span> <span class="s">&quot; vs. &quot;</span> <span class="o">+</span> <span class="n">teamb</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">Packers</span> <span class="n">vs</span><span class="o">.</span> <span class="n">Ravens</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">49</span><span class="n">ers</span> <span class="n">vs</span><span class="o">.</span> <span class="n">Patriots</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>带索引的列表迭代</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Packers&quot;</span><span class="p">,</span> <span class="s">&quot;49ers&quot;</span><span class="p">,</span> <span class="s">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s">&quot;Patriots&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">team</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">teams</span><span class="p">):</span>
+</span><span class='line'>  <span class="k">print</span> <span class="n">index</span><span class="p">,</span> <span class="n">team</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span> <span class="n">Packers</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="mi">49</span><span class="n">ers</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="n">Ravens</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="n">Patriots</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>列表推导式</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 已知一个列表，我们可以刷选出偶数列表方法</span>
+</span><span class='line'><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="n">even</span> <span class="o">=</span> <span class="p">[</span><span class="n">number</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">number</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>字典推导</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 和列表推导类似</span>
+</span><span class='line'><span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="k">print</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">value</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">teams</span><span class="p">)}</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="s">&#39;49ers&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;Packers&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>初始化列表的值</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
+</span><span class='line'><span class="k">print</span> <span class="n">items</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>列表转换为字符串</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="k">print</span> <span class="s">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="s">&#39;Packers, 49ers, Ravens, Patriots&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>从字典中获取元素</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;user&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;Max&#39;</span><span class="p">,</span> <span class="s">&#39;three&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+</span><span class='line'><span class="k">try</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">is_admin</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;admin&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">is_admin</span> <span class="o">=</span> <span class="bp">False</span>
+</span><span class='line'><span class="c"># 替换成这样：</span>
+</span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;user&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;Max&#39;</span><span class="p">,</span> <span class="s">&#39;three&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+</span><span class='line'><span class="n">is_admin</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;admin&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>获取列表的子集</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 前3个</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 中间4个</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 最后3个</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 奇数项</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span><span class='line'><span class="c"># 偶数项</span>
+</span><span class='line'><span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>60个字符解决FizzBuzz</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 写一个程序，打印数字1到100，3的倍数打印“Fizz”来替换这个数，5的倍数打印“Buzz”，对于既是3的倍数又是5的倍数的数字打印“FizzBuzz”</span>
+</span><span class='line'><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">101</span><span class="p">):</span><span class="k">print</span><span class="s">&#39;fizz&#39;</span><span class="p">[</span><span class="n">x</span><span class="o">%</span><span class="mi">3</span><span class="o">*</span><span class="mi">4</span><span class="p">::]</span><span class="o">+</span><span class="s">&#39;buzz&#39;</span><span class="p">[</span><span class="n">x</span><span class="o">%</span><span class="mi">5</span><span class="o">*</span><span class="mi">4</span><span class="p">::]</span><span class="ow">or</span> <span class="n">x</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>集合</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+</span><span class='line'><span class="k">print</span> <span class="n">Counter</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">Counter</span><span class="p">({</span><span class="s">&#39;1&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;h&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;e&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;o&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>迭代工具</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># 和collections库一样，还有一个库叫itertools，对某些问题真能高效地解决。其中一个用例是查找所有组合，他能告诉你在一个组中元素的所有不能的组合方式</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
+</span><span class='line'><span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Packers&quot;</span><span class="p">,</span> <span class="s">&quot;49ers&quot;</span><span class="p">,</span> <span class="s">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s">&quot;Patriots&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="k">for</span> <span class="n">game</span> <span class="ow">in</span> <span class="n">combinations</span><span class="p">(</span><span class="n">teams</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+</span><span class='line'><span class="k">print</span> <span class="n">game</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;49ers&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;Packers&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Ravens&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;49ers&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="s">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s">&#39;Patriots&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>False == True</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="bp">False</span> <span class="o">=</span> <span class="bp">True</span>
+</span><span class='line'><span class="k">if</span> <span class="bp">False</span><span class="p">:</span>
+</span><span class='line'>  <span class="k">print</span> <span class="s">&quot;Hello&quot;</span>
+</span><span class='line'><span class="k">else</span><span class="p">:</span>
+</span><span class='line'>  <span class="k">print</span> <span class="s">&quot;World&quot;</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">Hello</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://mikegao.github.com/blog/hello-world/"/>
+    <updated>2013-01-29T10:23:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/hello-world</id>
+    <content type="html"><![CDATA[<p>   终于搞好了OctPress On Git Page！
+   继续Blog之旅</p>
+
+<p>   附上手机图片一张，无码
+   <img src="http://mikegao.github.com/downloads/adidas.jpg"></p>
+]]></content>
+  </entry>
+  
+</feed>

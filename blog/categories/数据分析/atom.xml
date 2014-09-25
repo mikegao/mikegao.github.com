@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 数据分析 | Mike Tech]]></title>
+  <link href="http://mikegao.github.com/blog/categories/数据分析/atom.xml" rel="self"/>
+  <link href="http://mikegao.github.com/"/>
+  <updated>2014-08-19T15:28:43+08:00</updated>
+  <id>http://mikegao.github.com/</id>
+  <author>
+    <name><![CDATA[Mike Gao]]></name>
+    <email><![CDATA[mike.gao0611@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[数据分析-新手篇(常用指标和术语)]]></title>
+    <link href="http://mikegao.github.com/blog/shu-ju-fen-xi-xin-shou-pian-chang-yong-zhi-biao-he-zhu-yu/"/>
+    <updated>2014-07-21T17:19:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/shu-ju-fen-xi-xin-shou-pian-chang-yong-zhi-biao-he-zhu-yu</id>
+    <content type="html"><![CDATA[<h2>1.平均数</h2>
+
+<p>一般指算数平均数</p>
+
+<h2>2.绝对数与相对数</h2>
+
+<p><code>
+相对数＝ 比较数值(比数)/基础数值(基数)
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

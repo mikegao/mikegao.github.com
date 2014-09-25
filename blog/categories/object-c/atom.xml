@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: object-c | Mike Tech]]></title>
+  <link href="http://mikegao.github.com/blog/categories/object-c/atom.xml" rel="self"/>
+  <link href="http://mikegao.github.com/"/>
+  <updated>2014-08-19T15:28:43+08:00</updated>
+  <id>http://mikegao.github.com/</id>
+  <author>
+    <name><![CDATA[Mike Gao]]></name>
+    <email><![CDATA[mike.gao0611@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Object-C 数据类型和表达式]]></title>
+    <link href="http://mikegao.github.com/blog/objc-datatype/"/>
+    <updated>2013-02-06T14:13:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/objc-datatype</id>
+    <content type="html"><![CDATA[<h2>I. Int类型</h2>
+
+<h3>1.八进制</h3>
+
+<p>如果第一位是0，则表示8进制
+NSlog调用格式字符串使用格式符号%o，显示的值不带有前导0，使用%#o将显示前导0</p>
+
+<h3>2.十六进制</h3>
+
+<p>0x开头表示16进制
+<code>objc
+rgbColor = 0xFFEF0D;
+</code>
+NSlog调用格式字符串使用格式符号%x，显示的值不带有前导0x，使用%#X或%X将显示前导0x</p>
+
+<h2>II. Float类型</h2>
+
+<p>要使用科学计数法，NSLog格式字符串中指定格式字符%e，使用NSLog格式字符串%g允许NSLog确定使用常用的浮点计数法</p>
+
+<h3>III. Double类型</h3>
+
+<p>要显示double值，可用格式符号%f, %e或%g，它们与显示float值所用的格式符号是相同的。</p>
+
+<h3>IV. char类型</h3>
+
+<p>将字符放入一对单引号中就能得到字符常量
+字符常量是放在单引号中的单个字符，字符串则是放在双引号中的任意个字符。前面有@字符并且放在双引号中的字符串是NSString字符串对象。
+在NSLog调用中可以使用格式字符%c。</p>
+
+<p>``` objc
+int intergerVar = 100;
+float floatingVar = 331.79;
+double doubleVar = 8.44e+11;
+char charVar = 'W';</p>
+
+<p>NSLog(@"integerVar = %i", integerVar);
+NSLog(@"floatingVar = %f", floatingVar);
+NSLog(@"doubleVar = %e", doubleVar);
+NSLog(@"doubleVar = %g", doubleVar);
+NSLog(@"charVar = %c", charVar);
+```</p>
+
+<p>``` objc
+long int numberOfPoints = 131071100L;
+NSLog(@"long int = %li", numberOfPoints);</p>
+
+<p>short int number = 123;
+NSLog(@"shot int = %hi", number);</p>
+
+<p>unsigned int counter; // 变量counter只用于保存正值
+//0x00ffU
+200000UL //将常量20000看作unsigned long
+```</p>
+
+<p><code>objc
+-(id) newObject: (int) type; // 声明一个名为newObject的实例方法，它具有名为type的单个整型参数并有id类型的返回值。
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Object-C 类、对象和方法]]></title>
+    <link href="http://mikegao.github.com/blog/object-c-class/"/>
+    <updated>2013-02-06T11:33:00+08:00</updated>
+    <id>http://mikegao.github.com/blog/object-c-class</id>
+    <content type="html"><![CDATA[<p>``` objc 采用特定的语法对类和实例应用方法
+[ClassOrInstance method];
+// 在这条语句中，左方括号后要紧跟类的名称或者该类的实例的名称，它后面可以是一个或多个空格，空格后面是将要执行的方法。最后使用右方括号和结束分号来中止。</p>
+
+<p>yourCar = [Car new];</p>
+
+<p>[yourCar prep];     // 准备好第一次使用
+[yourCar drive];    // 驾驶汽车
+[yourCar wash];     // 洗车
+[yourCar getGase];  // 如果需要就给汽车加油
+[yourCar service];  // 维修</p>
+
+<p>[yourCar topDown];  // 是否为一辆敞蓬车
+[yourCar topUp];
+currentMileage = [yourCar cruuentOdometer];
+```</p>
+
+<p>``` objc Interface
+@interface NewClassName: ParentClassName
+{</p>
+
+<pre><code>memberDeclarations;
+</code></pre>
+
+<p>}
+methodDeclarations;
+@end</p>
+
+<p>//---- @interface section ----
+// 用于描述类、类的数据成分以及类的方法
+@interface Fraction: NSObject{</p>
+
+<pre><code>int numerator;
+int denominator;
+</code></pre>
+
+<p>}</p>
+
+<p>-(void) print; // 开头的负号（-）通知编译器，这是一个实例方法 （+）表示为类方法
+-(void) setNumberator: (int) n;
+-(void) setDenominator: (int) d;</p>
+
+<p>@end
+```</p>
+
+<p>``` objc Implementation
+//---- @implementaion section ----
+// 实现interface方法的实际代码
+@implementation Fraction</p>
+
+<p>-(void) print{</p>
+
+<pre><code>NSLog(@"%i/%i", numerator, denominator);
+</code></pre>
+
+<p>}</p>
+
+<p>-(void) setNumberator:(int)n{</p>
+
+<pre><code>numerator = n;
+</code></pre>
+
+<p>}</p>
+
+<p>-(void) setDenominator:(int)d{</p>
+
+<pre><code>denominator = d;
+</code></pre>
+
+<p>}</p>
+
+<p>@end
+```</p>
+
+<p>``` objc main
+Fraction <em>myFraction;  // myFraction用于存储来自新的Fraction类变量 （</em>）是必须的，表示myFraction是对Fraction的一个引用（或者指针）</p>
+
+<p>// Create an instance of a Fraction
+myFraction = [Fraction alloc];  // alloc是allocate的缩写，分配内存空间
+myFraction = [myFraction init];
+// 亦可写成
+// myFraction = [[Fraction alloc] init];
+// 最终简写形式
+// Fraction <em>myFraction = [[Fraction alloc] init];
+// 以上都扯淡
+Fraction </em>myFraction = [Fraction new];</p>
+
+<p>// Set fraction to 1/3
+[myFraction setNumberator: 1];
+[myFraction setDenominator: 3];</p>
+
+<p>// Display the fraction using the print method</p>
+
+<p>NSLog(@"The value of myFraction is:");
+[myFraction print];</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>
